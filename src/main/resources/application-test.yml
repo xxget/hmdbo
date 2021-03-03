@@ -34,6 +34,11 @@ spring:
 #  application:
 #    name: microservice-provider
 
+#时间日期格式化
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss.SSS
+    time: GMT+8
+
 # 用于雪花算法生成id
 application:
   datacenterId: 2

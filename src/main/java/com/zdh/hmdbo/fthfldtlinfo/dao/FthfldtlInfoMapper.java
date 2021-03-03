@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
  * </p>
  *
  * @author xxg
- * @since 2021-03-02
+ * @since 2021-03-03
  */
 @Mapper
 public interface FthfldtlInfoMapper extends BaseMapper<FthfldtlInfo> {

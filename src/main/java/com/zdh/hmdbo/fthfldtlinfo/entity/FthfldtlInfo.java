@@ -1,8 +1,10 @@
 package com.zdh.hmdbo.fthfldtlinfo.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.util.Date;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -18,7 +20,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author xxg
- * @since 2021-03-02
+ * @since 2021-03-03
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -28,6 +30,9 @@ import lombok.experimental.Accessors;
 public class FthfldtlInfo extends Model<FthfldtlInfo> {
 
     private static final long serialVersionUID = 1L;
+
+    @TableId(value = "id", type = IdType.AUTO)
+    private Integer id;
 
     //抄表时间
     @ApiModelProperty(value = "抄表时间")
@@ -39,8 +44,8 @@ public class FthfldtlInfo extends Model<FthfldtlInfo> {
     @TableField("porttype")
     private String porttype;
 
-    //gps卡号码参照fthfldev表获取devname
-    @ApiModelProperty(value = "gps卡号码 参照fthfldev表获取devname")
+    //gps卡号码
+    @ApiModelProperty(value = "gps卡号码")
     @TableField("portid")
     private String portid;
 
@@ -89,8 +94,8 @@ public class FthfldtlInfo extends Model<FthfldtlInfo> {
     @TableField("status")
     private String status;
 
-    //复述
-    @ApiModelProperty(value = "复述")
+    //描述
+    @ApiModelProperty(value = "描述")
     @TableField("retrycnt")
     private Integer retrycnt;
 
@@ -110,10 +115,13 @@ public class FthfldtlInfo extends Model<FthfldtlInfo> {
     @TableField("warninfo")
     private Integer warninfo;
 
+    @TableField("t_stact")
+    private Integer tStact;
+
 
     @Override
     protected Serializable pkVal() {
-        return null;
+        return this.id;
     }
 
 }

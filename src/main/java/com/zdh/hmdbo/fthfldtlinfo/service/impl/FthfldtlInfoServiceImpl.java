@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author xxg
- * @since 2021-03-02
+ * @since 2021-03-03
  */
 @Service
 public class FthfldtlInfoServiceImpl extends ServiceImpl<FthfldtlInfoMapper, FthfldtlInfo> implements FthfldtlInfoService {

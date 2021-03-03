@@ -4,6 +4,7 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.zdh.hmdbo.fthfldtlinfo.entity.FthfldtlInfo">
+        <id column="id" property="id" />
         <result column="colltime" property="colltime" />
         <result column="porttype" property="porttype" />
         <result column="portid" property="portid" />
@@ -21,6 +22,7 @@
         <result column="DIFFPT" property="diffpt" />
         <result column="resetinfo" property="resetinfo" />
         <result column="warninfo" property="warninfo" />
+        <result column="t_stact" property="tStact" />
     </resultMap>
 
 </mapper>
