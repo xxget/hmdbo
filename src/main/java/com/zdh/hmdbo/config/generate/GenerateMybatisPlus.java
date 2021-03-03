@@ -31,6 +31,8 @@ import java.util.Arrays;
 //配置文件位置
 public class GenerateMybatisPlus {
 
+//    @Value("${txt.a}")
+//    public String txt;
 
     /**
      * @param dataSourceurl
@@ -45,7 +47,7 @@ public class GenerateMybatisPlus {
      * @author: liyh
      * @time: 2020/12/21 21:21
      */
-    public void generate(String dataSourceurl, String dataSourcename, String dataSourcepassword, String dataSourcedriver, String tables, String packageParent, boolean isNormalize) {
+    public void generate(String dataSourceurl, String dataSourcename, String dataSourcepassword, String dataSourcedriver, String tables, String packageParent, boolean isNormalize, String moduleName) {
 
         AutoGenerator mpg = new AutoGenerator();
         // 配置策略
@@ -74,6 +76,7 @@ public class GenerateMybatisPlus {
 
         //2、设置数据源
         DataSourceConfig dsc = new DataSourceConfig();
+        //数据源数据库类型，此处设置的是SqlServer
         dsc.setDbType(DbType.SQL_SERVER);
         dsc.setUrl(dataSourceurl);
         dsc.setDriverName(dataSourcedriver);
@@ -89,8 +92,8 @@ public class GenerateMybatisPlus {
         pc.setServiceImpl("service.impl"); // 同上
         pc.setMapper("dao"); // 默认是mapper
         pc.setEntity("entity"); // 默认是entity
-        pc.setXml("mapping"); // 默认是默认是mapper.xml
-        pc.setModuleName("fthfldtlinfo"); // 控制层请求地址的包名显示
+        pc.setXml("mapper"); // 默认是默认是mapper.xml
+        pc.setModuleName(moduleName); // 控制层请求地址的包名显示
         mpg.setPackageInfo(pc);
 
         //4、策略配置

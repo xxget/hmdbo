@@ -40,14 +40,12 @@ public class PlainService {
     @Scheduled(fixedRate = 5000)//每个3000毫秒执行一次，无论上次是否会执行成功，下次都会执行
     public void cronScheduled(){
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");//设置日期格式
-        log.info("[ "+ initTime + " ]");
         System.out.println("定时任务： " + df.format(new Date()) + "我来了。。。[ "+ gitIdInfo.genSnowFlakeId() + " ]");
 
         FthfldtlInfo fthfldtlInfo = new FthfldtlInfo();
         fthfldtlInfo.setColltime(new Date());
-        log.info("11111111111111" + fthfldtlInfo.getColltime().toString());
         fthfldtlInfo.setPorttype("GPRS无线网络");
-        fthfldtlInfo.setPortid("1");
+        fthfldtlInfo.setPortid("GPRS13300001111");
         fthfldtlInfo.setDevaddr(0);
         fthfldtlInfo.setDensity((float) 0);
         fthfldtlInfo.setTempretu((float) 0);
@@ -63,7 +61,6 @@ public class PlainService {
         fthfldtlInfo.setResetinfo(0);
         fthfldtlInfo.setWarninfo(0);
         fthfldtlInfo.setTStact(0);
-        List<FthfldtlInfo> fthfldtlInfoList = (List<FthfldtlInfo>) fthfldtlInfoController.save(fthfldtlInfo);
-        log.info(fthfldtlInfoList);
+        fthfldtlInfoController.save(fthfldtlInfo);
     }
 }

@@ -18,18 +18,18 @@ import lombok.*;
 public class Result {
 
     /**
-     * 编码
+     * 返回码
     **/
     @NonNull
     private Integer code;
     /**
-     * 返回消息
+     * 返回信息
      **/
     @NonNull
     private String message;
 
     /**
-     * 数据
+     * 其他参数
      **/
     private Object data;
 

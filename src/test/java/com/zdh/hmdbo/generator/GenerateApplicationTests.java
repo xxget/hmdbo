@@ -20,37 +20,38 @@ import org.springframework.test.context.TestPropertySource;
 @TestPropertySource("classpath:generate.properties")
 class GenerateApplicationTests {
 
+    //数据库数据源url
     @Value("${datasource.url}")
     private String dataSourceurl;
 
+    //数据库用户名
     @Value("${datasource.username}")
     private String dataSourcename;
 
+    //数据库登录密码
     @Value("${datasource.password}")
     private String dataSourcepassword;
 
+    //数据库驱动
     @Value("${datasource.driver-class-name}")
     private String dataSourcedriver;
+    //模块名
+    @Value("${module.name}")
+    private String moduleName;
 
+    //需要生成的表名，多张表用英文逗号隔开 #
     @Value("${datatables.name}")
     private String tables;
-
+    //父包名
     @Value("${package.parent}")
     private String packageParent;
 
     @Value("${datatables.isNormalize}")
     private boolean isNormalize;
 
+
     @Test
     void generateMybatisPlusTest() {
-        log.info("------------dataSourceurl: " + dataSourceurl);
-        log.info("------------dataSourcename: " + dataSourcename);
-        log.info("------------dataSourcepassword: " + dataSourcepassword);
-        log.info("------------dataSourcedriver: " + dataSourcedriver);
-        log.info("------------tables: " + tables);
-        log.info("------------packageParent: " + packageParent);
-        log.info("------------isNormalize: " + isNormalize);
-
         new GenerateMybatisPlus().generate(
                 dataSourceurl,
                 dataSourcename,
@@ -58,6 +59,8 @@ class GenerateApplicationTests {
                 dataSourcedriver,
                 tables,
                 packageParent,
-                isNormalize);
+                isNormalize,
+                moduleName);
+        log.info("代码生成方法执行完成！");
     }
 }

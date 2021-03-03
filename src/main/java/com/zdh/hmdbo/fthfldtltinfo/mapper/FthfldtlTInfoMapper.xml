@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zdh.hmdbo.fthfldtltinfo.dao.FthfldtlTInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.zdh.hmdbo.fthfldtltinfo.entity.FthfldtlTInfo">
+        <id column="id" property="id" />
+        <result column="colltime" property="colltime" />
+        <result column="porttype" property="porttype" />
+        <result column="portid" property="portid" />
+        <result column="devaddr" property="devaddr" />
+        <result column="density" property="density" />
+        <result column="tempretu" property="tempretu" />
+        <result column="pressure" property="pressure" />
+        <result column="diffpres" property="diffpres" />
+        <result column="flow" property="flow" />
+        <result column="sumflow" property="sumflow" />
+        <result column="userid" property="userid" />
+        <result column="status" property="status" />
+        <result column="retrycnt" property="retrycnt" />
+        <result column="PREST" property="prest" />
+        <result column="DIFFPT" property="diffpt" />
+        <result column="resetinfo" property="resetinfo" />
+        <result column="warninfo" property="warninfo" />
+        <result column="t_stact" property="tStact" />
+        <result column="devname" property="devname" />
+    </resultMap>
+
+</mapper>
