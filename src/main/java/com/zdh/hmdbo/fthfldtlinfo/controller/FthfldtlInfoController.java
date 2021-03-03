@@ -36,7 +36,7 @@ public class FthfldtlInfoController {
     @Autowired
     public FthfldtlInfoService fthfldtlInfoService;
 
-    @ApiOperation(value = "新增")
+    @ApiOperation(value = "新增", notes = "新增")
     @PostMapping("/save")
     public Result save(@RequestBody FthfldtlInfo fthfldtlInfo){
         fthfldtlInfoService.save(fthfldtlInfo);
