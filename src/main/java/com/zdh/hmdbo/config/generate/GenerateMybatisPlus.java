@@ -1,4 +1,4 @@
-package com.zdh.hmdbo.config;
+package com.zdh.hmdbo.config.generate;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.FieldFill;
@@ -19,10 +19,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * @description:
- * @author: liyh
- * @time: 2020/12/21 21:20
- */
+ * @Author(开发者) Xi
+ * @E-mail(邮箱) xxget@live.com
+ * @Description(说明) //MybatisPlus代码生成主类
+ * @Date(日期) 8:54 2021/3/3
+ * @Param(参数)
+ * @return(返回)
+ * @Version(版本) 1.0.0
+**/
 
 //配置文件位置
 public class GenerateMybatisPlus {

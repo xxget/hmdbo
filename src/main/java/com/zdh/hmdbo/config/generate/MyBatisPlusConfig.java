@@ -1,4 +1,4 @@
-package com.zdh.hmdbo.config;
+package com.zdh.hmdbo.config.generate;
 
 import com.baomidou.mybatisplus.core.injector.ISqlInjector;
 //import com.baomidou.mybatisplus.extension.injector.LogicSqlInjector;

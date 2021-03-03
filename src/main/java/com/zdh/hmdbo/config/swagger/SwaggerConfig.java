@@ -1,4 +1,4 @@
-package com.zdh.hmdbo.config;
+package com.zdh.hmdbo.config.swagger;
 
 
 import org.springframework.context.annotation.Bean;
@@ -40,8 +40,9 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("RESTful API")
+                .title("华明系统取数模块接口文档")
                 .description("接口文档")
+                //BaseUrl,记得改为自己的（IP+port+context-path）
                 .termsOfServiceUrl("")
                 .version("1.0")
                 .build();

@@ -1,4 +1,4 @@
-package com.zdh.hmdbo.config;
+package com.zdh.hmdbo.config.generate;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import lombok.extern.slf4j.Slf4j;

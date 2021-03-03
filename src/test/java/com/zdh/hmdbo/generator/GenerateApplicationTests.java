@@ -1,6 +1,6 @@
 package com.zdh.hmdbo.generator;
 
-import com.zdh.hmdbo.config.GenerateMybatisPlus;
+import com.zdh.hmdbo.config.generate.GenerateMybatisPlus;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
