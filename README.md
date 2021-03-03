@@ -60,3 +60,11 @@ inserted i LEFT JOIN pd.fthfldev f ON i.portid=f.portid
 GO
 ****
 
+## 遗留问题
+####这个问题在系统正式后不需要系统插入数据，暂不处理。
+SqlServer数据库临时表主键设置了自增长，mybatis应该会返回自增长的id，但我并不需要。
+所以在insert标签中加入 useGeneratedKeys="false"属性。
+![img.png](img.png)
+
+****
+
